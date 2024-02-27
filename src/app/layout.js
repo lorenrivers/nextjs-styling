@@ -2,8 +2,17 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import headerStyles from "./header.module.css";
 import footerStyles from "./footer.module.css";
+import { Happy_Monkey } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Caveat } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const happy_monkey = Happy_Monkey({
+  weight: "400",
+  subsets: ["latin"],
+});
+const playfair_display = Playfair_Display({ subsets: ["latin"] });
+export const caveat = Caveat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Testing Styles and Metadata",
@@ -22,10 +31,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <header className={headerStyles.header}>
-        <h1 className="uppercase">I'm a header on every page</h1>
+        <h1 className={playfair_display.className}>
+          I'm a header on every page
+        </h1>
       </header>
-      <body className={inter.className}>{children}</body>
-      <footer className={footerStyles.footer}>Website footer</footer>
+      <body className={happy_monkey.className}>{children}</body>
+      <footer className={`${footerStyles.footer} ${caveat.className}`}>
+        Website footer
+      </footer>
     </html>
   );
 }
