@@ -18,6 +18,12 @@ export default function Home() {
       >
         Counter
       </Link>
+      <Link
+        href="/animations"
+        className="pointer-events-auto ml-8 rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500 w-max"
+      >
+        Animations
+      </Link>
     </main>
   );
 }

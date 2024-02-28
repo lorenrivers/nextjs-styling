@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <body className={happy_monkey.className}>
         <header className={headerStyles.header}>
           <h1 className={playfair_display.className}>
-            I'm a header on every page
+            Im a header on every page
           </h1>
         </header>
         {children}
