@@ -30,15 +30,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <header className={headerStyles.header}>
-        <h1 className={playfair_display.className}>
-          I'm a header on every page
-        </h1>
-      </header>
-      <body className={happy_monkey.className}>{children}</body>
-      <footer className={`${footerStyles.footer} ${caveat.className}`}>
-        Website footer
-      </footer>
+      <body className={happy_monkey.className}>
+        <header className={headerStyles.header}>
+          <h1 className={playfair_display.className}>
+            I'm a header on every page
+          </h1>
+        </header>
+        {children}
+        <footer className={`${footerStyles.footer} ${caveat.className}`}>
+          Website footer
+        </footer>
+      </body>
     </html>
   );
 }
